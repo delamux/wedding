@@ -1,6 +1,6 @@
 services:
   app:
-    build: nginx
+    build: .
     container_name: wedding-site
     ports:
       - "8080:8080"
