@@ -1,0 +1,14 @@
+services:
+  app:
+    build: nginx
+    container_name: wedding-site
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro  # Optional if you want to override or map nginx.conf
+    networks:
+      - websites
+
+networks:
+  websites:
+    external: true
