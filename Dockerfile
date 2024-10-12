@@ -2,11 +2,9 @@ FROM node:lts AS build
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY . .
 
 RUN npm install
-
-COPY nginx .
 
 RUN npm run build
 
